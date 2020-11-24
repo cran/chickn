@@ -32,6 +32,12 @@ DB_funR <- function(Data_cumsum, Cluster_partition, C, DIR_output, ncores = 4){
           'Windows' = {
             cluster_Type = 'PSOCK'
           },
+          "Darwin" = {
+            cluster_Type = 'FORK'
+          },
+          "SunOS" = {
+            cluster_Type = 'PSOCK'
+          },
           stop(paste("Package is not compatible with", Sys.info()['sysname']))
   )
   core <- parallel::makeCluster(ncores, type = cluster_Type)
@@ -53,6 +59,12 @@ DB_funR <- function(Data_cumsum, Cluster_partition, C, DIR_output, ncores = 4){
             cluster_Type = 'FORK'
           },
           'Windows' = {
+            cluster_Type = 'PSOCK'
+          },
+          "Darwin" = {
+            cluster_Type = 'FORK'
+          },
+          "SunOS" = {
             cluster_Type = 'PSOCK'
           },
           stop(paste("Package is not compatible with", Sys.info()['sysname']))

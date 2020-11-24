@@ -47,6 +47,12 @@ split_foreach <- function(FUN, ind, ...,
           'Windows' = {
             cluster_Type = 'PSOCK'
           },
+          "Darwin" = {
+            cluster_Type = 'FORK'
+          },
+          "SunOS" = {
+            cluster_Type = 'PSOCK'
+          },
           stop(paste("Package is not compatible with", Sys.info()['sysname']))
   )
   cl <- parallel::makeCluster(ncores, type = cluster_Type)

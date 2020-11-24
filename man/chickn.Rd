@@ -5,19 +5,21 @@
 \alias{chickn}
 \title{chickn-package}
 \description{
-R package \code{chickn} implements Chromatogram Hierarchical Compressive K-means with Nystrom approximation
+The R package \code{chickn} implements the Chromatogram Hierarchical Compressive K-means with Nystrom approximation
 clustering approach. It is designed to cluster a large collection of high-resolution
-mass spectrometry signals (chromatographic profiles) relying on the compressed data version (data sketch).
-Data compression is achieved using the Nystrom method and the sketch operator from \insertCite{DBLP:journals/corr/KerivenBGP16}{chickn}.
+mass spectrometry signals (chromatographic profiles) relying on a compressed version of the data (a.k.a. data sketch).
+Data compression is achieved following the guidelines for Nystrom approximation provided by \insertCite{wang2019scalable}{chickn}
+and the sketching operator from \insertCite{DBLP:journals/corr/KerivenBGP16}{chickn}.
 The Filebacked Big Matrix (FBM) class from the \href{https://github.com/privefl/bigstatsr}{bigstatsr} package
 is used to store and to manupulate matrices, which cannot be load in memory.
 }
 \references{
 \itemize{
-\item \insertRef{wang2019scalable}{chickn}
-\item \insertRef{DBLP:journals/corr/KerivenBGP16}{chickn}.
+\item Permiakova O, Guibert R, Kraut A, Fortin T, Hesse AM, Burger T (2020) "CHICKN: Extraction of peptide chromatographic
+elution profiles from large scale mass spectrometry data by means of Wasserstein compressive hierarchical cluster analysis."
+BMC Bioinformatics (under revision).
 }
 }
 \author{
-Olga Permiakova
+Olga Permiakova, Romain Guibert, Thomas Burger
 }

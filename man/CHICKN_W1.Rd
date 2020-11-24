@@ -105,8 +105,9 @@ output  <- CHICKN_W1(Data = X_FBM, K = 2, k_total =8, max_neighbors = 10, ncores
 }
 \references{
 \itemize{
-\item \insertRef{wang2019scalable}{chickn}
-\item \insertRef{DBLP:journals/corr/KerivenBGP16}{chickn}.
+\item Permiakova O, Guibert R, Kraut A, Fortin T, Hesse AM, Burger T (2020) "CHICKN: Extraction of peptide chromatographic
+elution profiles from large scale mass spectrometry data by means of Wasserstein compressive hierarchical cluster analysis."
+BMC Bioinformatics (under revision).
 }
 }
 \seealso{

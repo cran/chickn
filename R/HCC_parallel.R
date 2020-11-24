@@ -114,6 +114,12 @@ hcc_parallel<- function(Data, W, K, maxLevel, ncores = 2, DIR_output = tempfile(
     'Windows' = {
       cluster_Type = 'PSOCK'
     },
+    "Darwin" = {
+      cluster_Type = 'FORK'
+    },
+    "SunOS" = {
+      cluster_Type = 'PSOCK'
+    },
     stop(paste("Package is not compatible with", Sys.info()['sysname']))
   )
   core <- parallel::makeCluster(ncores, type = cluster_Type)

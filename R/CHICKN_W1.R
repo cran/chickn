@@ -53,8 +53,11 @@
 #' \code{\link{hcc_parallel}}, \code{\link{Preimage}}, [bigstatsr](https://github.com/privefl/bigstatsr)
 #' @references 
 #' \itemize{
-#' \item \insertRef{wang2019scalable}{chickn}
-#' \item \insertRef{DBLP:journals/corr/KerivenBGP16}{chickn}.
+#' \item Permiakova O, Guibert R, Kraut A, Fortin T, Hesse AM, Burger T (2020) "CHICKN: Extraction of peptide chromatographic 
+#' elution profiles from large scale mass spectrometry data by means of Wasserstein compressive hierarchical cluster analysis." 
+#' BMC Bioinformatics (under revision).
+# \item \insertRef{wang2019scalable}{chickn}
+# \item \insertRef{DBLP:journals/corr/KerivenBGP16}{chickn}.
 #' }
 #' @export
 CHICKN_W1 <- function(Data, K=2, k_total,
